@@ -1,0 +1,34 @@
+{% extends "base.html" %} {% block title %}Sheets{% endblock %}
+
+{% block content %}
+<h1 align="center">Times</h1>
+<form method="POST">
+    <label style="font-family:arial">{{ day }}: </label>
+    <label for="st" style="font-family:arial">Start: </label>
+    <input type="time" name="st" id="st" >
+    <label for="bst" style="font-family:arial">Break: </label>
+    <input type="time" name="bst" id="bst" >
+    <label for="bet" style="font-family:arial"> to </label>
+    <input type="time" name="bet" id="bet" >
+    <label for="et" style="font-family:arial">End: </label>
+    <input type="time" name="et" id="et" >
+    <label for="et" style="font-family:arial">Total: {{ total }} </label>
+    <br />
+    <div align="center">
+        <button type="submit" class="btn btn-primary">Clock Time</button>
+    </div>
+</form>
+<ul class="list-group list-group-flush" id="notes">
+  {% for note in user.notes %}
+  <li class="list-group-item">
+    {{ note.data }}
+    <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </li>
+  {% endfor %}
+</ul>
+<h2>
+    {{ total }}
+</h2>
+{% endblock %}
