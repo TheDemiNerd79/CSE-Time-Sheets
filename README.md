@@ -4,11 +4,14 @@ Welcome to the Computer Servants Engineering (CSE) Timekeeping System repository
 for employees of CSE, making it easier to manage work hours and projects effectively.
 
 Features:
-User-friendly Interface: The system provides an intuitive interface for employees to log in, clock in/out, and view their work hours.
-Project Management: Employees can associate their time entries with specific projects, allowing for accurate project-based time tracking.
-Admin Dashboard: Administrators have access to a dashboard where they can manage user accounts, view time logs, and generate reports.
+Users must have access by PW protected accounts and be able to reset PW.
+Admin must be able to create/delete accounts and reset users PW.
+Time records should include date, project (number and name) and hours worked.
+Time records should be editable by the user (Add/Delete/Edit) until marked by administrator.
+Administrator should be able to download or pull records within a date range and lock them from editing/deleting (could lock a date range as option to locking individual records).
+Admin must be able to add/edit/delete project records and the records should include dates for start and end eligibility.
 
 Technologies Used:
-Frontend: HTML
+Frontend: HTML, CSS
 Backend: Python, Json
 Database: SQLAlchemy
